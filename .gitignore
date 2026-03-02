@@ -1,0 +1,4 @@
+node_modules
+dist
+chat_memory.db
+.env
