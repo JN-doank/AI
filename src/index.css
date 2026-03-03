@@ -19,7 +19,17 @@
 }
 
 @layer base {
-  body { @apply bg-bg text-text font-mono h-screen overflow-hidden; }
+  body {
+    @apply bg-bg text-text font-mono h-screen overflow-hidden;
+  }
+}
+
+.markdown-body p {
+  @apply mb-2;
+}
+
+.markdown-body ul {
+  @apply list-disc ml-4 mb-2;
 }
 
 @keyframes fadeUp {
@@ -27,7 +37,15 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-up { animation: fadeUp 0.3s ease forwards; }
+.animate-fade-up {
+  animation: fadeUp 0.3s ease forwards;
+}
 
-.custom-scrollbar::-webkit-scrollbar { width: 4px; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+.dot-bounce {
+  animation: bounce 1.2s infinite;
+}
